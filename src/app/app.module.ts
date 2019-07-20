@@ -8,11 +8,14 @@ import { MustMatchDirective } from './_helpers';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
+import { routing } from './app.routing';
+
 import { AppComponent } from './app.component';
 import { RectiveFormComponent } from './rective-form/rective-form.component';
 import { TemplateDriveFormComponent } from './template-drive-form/template-drive-form.component';
 import { JwPaginationComponent } from 'jw-angular-pagination';
 import { PaginationComponent } from './pagination/pagination.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +24,7 @@ import { PaginationComponent } from './pagination/pagination.component';
     TemplateDriveFormComponent,
     JwPaginationComponent,
     PaginationComponent,
+    HomeComponent,
 
     MustMatchDirective
   ],
@@ -28,6 +32,7 @@ import { PaginationComponent } from './pagination/pagination.component';
     BrowserModule,
     ReactiveFormsModule,
     FormsModule,
+    routing,
 
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
