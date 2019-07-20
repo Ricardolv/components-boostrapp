@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { MessageService } from '../_services';
+
+import { first } from 'rxjs/operators';
+
+import { User } from '../_models';
+import { MessageService , UserService, AuthenticationService } from '../_services';
 
 @Component({
   selector: 'app-home',
@@ -8,7 +12,18 @@ import { MessageService } from '../_services';
 })
 export class HomeComponent {
 
-  constructor(private messageService: MessageService) { }
+  loading = false;
+  users: User[];
+
+  ngOnInit() {
+      this.loading = true;
+      this.userService.getAll().pipe(first()).subscribe(users => {
+          this.loading = false;
+          this.users = users;
+      });
+  }
+
+  constructor(private messageService: MessageService, private userService: UserService) { }
 
     sendMessage(): void {
         // send message to subscribers via observable subject
