@@ -18,6 +18,7 @@ import { JwPaginationComponent } from 'jw-angular-pagination';
 import { PaginationComponent } from './pagination';
 import { HomeComponent } from './home';
 import { LoginComponent } from './login';
+import { DynamicReactiveFormsComponent } from './dynamic-reactive-forms/dynamic-reactive-forms.component';
 
 @NgModule({
 
@@ -32,14 +33,16 @@ import { LoginComponent } from './login';
   ],
   declarations: [
     AppComponent,
+
+    MustMatchDirective,
+
     RectiveFormComponent,
     TemplateDriveFormComponent,
     JwPaginationComponent,
     PaginationComponent,
     HomeComponent,
     LoginComponent,
-
-    MustMatchDirective
+    DynamicReactiveFormsComponent
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },

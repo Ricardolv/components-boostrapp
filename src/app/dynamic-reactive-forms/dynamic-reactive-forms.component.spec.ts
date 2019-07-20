@@ -1,0 +1,25 @@
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+
+import { DynamicReactiveFormsComponent } from './dynamic-reactive-forms.component';
+
+describe('DynamicReactiveFormsComponent', () => {
+  let component: DynamicReactiveFormsComponent;
+  let fixture: ComponentFixture<DynamicReactiveFormsComponent>;
+
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [ DynamicReactiveFormsComponent ]
+    })
+    .compileComponents();
+  }));
+
+  beforeEach(() => {
+    fixture = TestBed.createComponent(DynamicReactiveFormsComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});
