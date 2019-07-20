@@ -5,16 +5,21 @@ import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { RectiveFormComponent } from './rective-form/rective-form.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { TemplateDriveFormComponent } from './template-drive-form/template-drive-form.component';
+import { MustMatchDirective } from './_helpers';
 
 @NgModule({
   declarations: [
     AppComponent,
-    RectiveFormComponent
+    RectiveFormComponent,
+    TemplateDriveFormComponent,
+    MustMatchDirective
   ],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
+    FormsModule,
 
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
