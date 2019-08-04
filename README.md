@@ -1,8 +1,7 @@
 # ComponentsBoostrapp
 
 ## Getting Started
-
-Super simple Angular app
+Simple Angular
 
 ## Get the Code
 ```
@@ -12,4 +11,5 @@ npm i
 ```
 ## Development server
 Run `ng serve -o`
+
 ![login](data/login.png)
