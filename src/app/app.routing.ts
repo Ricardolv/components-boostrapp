@@ -7,6 +7,8 @@ import { PaginationComponent } from './pagination';
 import { TemplateDriveFormComponent } from './template-drive-form';
 import { RectiveFormComponent } from './rective-form';
 import { DynamicReactiveFormsComponent } from './dynamic-reactive-forms';
+import { AlertComponent } from './_alert/alert.component';
+import { MultiAlertsComponent } from './multi-alerts';
 
 const routes: Routes = [
   { path: '', component: HomeComponent, canActivate: [AuthGuard] },
@@ -15,6 +17,7 @@ const routes: Routes = [
   { path: 'tdf', component: TemplateDriveFormComponent },
   { path: 'rfv', component: RectiveFormComponent },
   { path: 'drfc', component: DynamicReactiveFormsComponent },
+  { path: 'multialert', component: MultiAlertsComponent },
 
   // otherwise redirect to home
   { path: '**', redirectTo: '' }

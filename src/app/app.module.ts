@@ -9,6 +9,7 @@ import { environment } from '../environments/environment';
 
 import { MustMatchDirective, fakeBackendProvider, JwtInterceptor, ErrorInterceptor } from './_helpers';
 
+import { AlertModule } from './_alert';
 import { appRoutingModule } from './app.routing';
 
 import { AppComponent } from './app.component';
@@ -18,6 +19,7 @@ import { JwPaginationComponent } from 'jw-angular-pagination';
 import { PaginationComponent } from './pagination';
 import { HomeComponent } from './home';
 import { LoginComponent } from './login';
+import { MultiAlertsComponent } from './multi-alerts';
 import { DynamicReactiveFormsComponent } from './dynamic-reactive-forms/dynamic-reactive-forms.component';
 
 @NgModule({
@@ -27,6 +29,7 @@ import { DynamicReactiveFormsComponent } from './dynamic-reactive-forms/dynamic-
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
+    AlertModule,
     appRoutingModule,
 
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
@@ -42,6 +45,7 @@ import { DynamicReactiveFormsComponent } from './dynamic-reactive-forms/dynamic-
     PaginationComponent,
     HomeComponent,
     LoginComponent,
+    MultiAlertsComponent,
     DynamicReactiveFormsComponent
   ],
   providers: [

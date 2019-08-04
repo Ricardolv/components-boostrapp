@@ -1,4 +1,4 @@
-# ComponentsBoostrapp
+# Components Boostrapp
 
 ## Getting Started
 Simple Angular
